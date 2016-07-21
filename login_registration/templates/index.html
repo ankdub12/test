@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+</head>
+<body>
+
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+  {% for message in messages %}
+    <p>{{message}}</p>
+  {% endfor %}
+ {% endif %}
+{% endwith %}
+	
+	 <form action="/create" method="post">
+	 	<p>First_name: <input type="text" name="first_name"></p>
+	 	<p>Last_name: <input type="text" name="last_name"></p>
+	 	<p>Email: <input type="text" name="email"></p>
+	 	<p>Password: <input type="password" name="password"></p>
+	 	<p>Confirmation Password: <input type="password" name="confirm_password"></p>
+	 	<input type="submit" value="submit"></input>
+	</form>
+	
+</body>
+</html>
